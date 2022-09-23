@@ -1,0 +1,4 @@
+{
+  "/model/:model": ["GET", "POST"],
+  "/model/:model/:id": ["GET", "PUT", "DELETE"]
+}
