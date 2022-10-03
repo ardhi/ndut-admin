@@ -1,7 +1,7 @@
 module.exports = {
   handler: async function (request, reply) {
     if (!request.isAdmin) throw this.Boom.forbidden('onlyAminCanDoThis', { ndut: 'ndutAdmin' })
-    const { handler } = await this.ndutRest.helper.modelAsRemoveRoute({ model: request.params.model })
+    const { handler } = await this.ndutRest.helper.modelAsRemoveRoute({ alias: request.params.model })
     return await handler.call(this, request, reply)
   },
   schema: {
